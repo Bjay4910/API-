@@ -1,151 +1,71 @@
-# API Dashboard
+# Getting Started with Create React App
 
-A modern React dashboard that integrates multiple APIs to display data in an elegant and interactive UI.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![API Dashboard](./public/logo192.png)
 
-## Overview
+## Available Scripts
 
-This project is a customizable dashboard built with React and Material UI that showcases data from multiple external APIs in real-time. It provides a clean, responsive interface with widgets for different data sources.
+In the project directory, you can run:
 
-## Features
+### `npm start`
 
-- **Modern UI**: Built with Material UI for a clean, professional look
-- **Responsive Design**: Works on desktop, tablet, and mobile devices
-- **Multiple Data Sources**: Integrates with various APIs
-- **Interactive Widgets**: Real-time data visualization with charts and stats
-- **Customizable Layout**: Flexible grid layout for organizing widgets
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Widgets
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- **Weather**: Current conditions and forecast using OpenWeatherMap API
-- **News**: Latest headlines from NewsAPI
-- **Stocks**: Stock prices and trends from Finnhub API
-- **COVID-19**: Global statistics from Disease.sh API
+### `npm test`
 
-## Tech Stack
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- **React**: Frontend library for building user interfaces
-- **Material UI**: Component library for modern design
-- **Axios**: HTTP client for API requests
-- **Recharts**: Responsive charting library
-- **React Grid Layout**: Draggable and resizable grid layout
+### `npm run build`
 
-## Installation
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/api-dashboard.git
-   cd api-dashboard
-   ```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-3. Configure API keys:
-   - Open `src/config/api.config.js`
-   - Replace placeholder API keys with your own from:
-     - [OpenWeatherMap](https://openweathermap.org/api)
-     - [NewsAPI](https://newsapi.org/)
-     - [Finnhub](https://finnhub.io/)
-     - No API key required for [Disease.sh](https://disease.sh/)
+### `npm run eject`
 
-4. Start the development server:
-   ```bash
-   npm start
-   ```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Usage
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-After starting the development server, open [http://localhost:3000](http://localhost:3000) in your browser to view the dashboard.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Each widget displays data from its respective API and includes:
-- A refresh button to fetch new data
-- Visual representations of the data
-- Interactive elements like charts and lists
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Project Structure
+## Learn More
 
-```
-api-dashboard/
-├── public/             # Static files
-├── src/                # Source code
-│   ├── components/     # React components
-│   │   ├── Dashboard/  # Main dashboard component
-│   │   ├── UI/         # Reusable UI components
-│   │   └── Widgets/    # Individual widgets
-│   ├── config/         # Configuration files
-│   │   └── api.config.js # API keys and endpoints
-│   ├── context/        # React context providers
-│   ├── hooks/          # Custom React hooks
-│   ├── services/       # API services
-│   │   └── api/        # API integration code
-│   ├── utils/          # Utility functions
-│   │   └── apiUtils.js # API utilities
-│   ├── App.js          # Main App component
-│   └── index.js        # Entry point
-└── package.json        # Dependencies and scripts
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Customization
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Adding New Widgets
+### Code Splitting
 
-1. Create a new component in the `src/components/Widgets` directory
-2. Add your API configuration in `src/config/api.config.js`
-3. Import and add the widget to the grid in `src/components/Dashboard/Dashboard.js`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Modifying API Integrations
+### Analyzing the Bundle Size
 
-The project uses a centralized API utility in `src/utils/apiUtils.js` that handles:
-- Creating pre-configured Axios instances
-- Adding API keys to requests
-- Error handling
-- Response formatting
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Styling
+### Making a Progressive Web App
 
-The project uses Material UI's styling system with:
-- Customizable themes
-- CSS-in-JS via the `sx` prop
-- Responsive design utilities
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## Development
+### Advanced Configuration
 
-### Available Scripts
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-- `npm start`: Runs the app in development mode
-- `npm build`: Builds the app for production
-- `npm test`: Runs the test suite
-- `npm eject`: Ejects from Create React App
+### Deployment
 
-## Security Notes
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-- **API Keys**: For production use, store API keys in environment variables
-- **CORS**: Some APIs may require CORS handling or a proxy server
-- **Rate Limiting**: Be aware of API rate limits for your keys
+### `npm run build` fails to minify
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-Distributed under the MIT License. See `LICENSE` file for more information.
-
-## Acknowledgments
-
-- [Create React App](https://github.com/facebook/create-react-app)
-- [Material UI](https://mui.com/)
-- [Recharts](https://recharts.org/)
-- API providers:
-  - [OpenWeatherMap](https://openweathermap.org/)
-  - [NewsAPI](https://newsapi.org/)
-  - [Finnhub](https://finnhub.io/)
-  - [Disease.sh](https://disease.sh/)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

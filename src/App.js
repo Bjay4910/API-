@@ -1,29 +1,24 @@
 import React from 'react';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainLayout from './components/Layout/MainLayout';
+import HomePage from './pages/HomePage';
+import ProfilePage from './pages/ProfilePage';
+import DocumentationPage from './pages/DocumentationPage';
 import Dashboard from './components/Dashboard/Dashboard';
-
-// Create a theme instance
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#1976d2',
-    },
-    secondary: {
-      main: '#dc004e',
-    },
-    background: {
-      default: '#f5f5f5',
-    },
-  },
-});
+import './App.css';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Dashboard />
-    </ThemeProvider>
+    <Router>
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/documentation" element={<DocumentationPage />} />
+        </Routes>
+      </MainLayout>
+    </Router>
   );
 }
 
